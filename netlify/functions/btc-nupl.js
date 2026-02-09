@@ -5,9 +5,15 @@ export default async (req, context) => {
   try {
     const url = 'https://charts.bitbo.io/net-unrealized-profit-loss/';
     const res = await fetch(url, {
-      headers: {
-        'user-agent': 'Mozilla/5.0 (compatible; AntonNUPLBot/1.0; +https://bitbo.io/)'
-      }
+      headers: {
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "accept-language": "en-US,en;q=0.9",
+        "cache-control": "no-cache",
+        "pragma": "no-cache",
+        "referer": "https://charts.bitbo.io/",
+        "upgrade-insecure-requests": "1"
+      }
     });
 
     if (!res.ok) {
